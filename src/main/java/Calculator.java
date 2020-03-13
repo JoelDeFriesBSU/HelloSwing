@@ -25,10 +25,34 @@ public class Calculator {
     }
 
     public String add(String toAdd) {
-        var mainNumberInteger = Integer.parseInt(previousNumber,2);
-        var newNumberInteger = Integer.parseInt(toAdd,2);
+        var mainNumberInteger = Integer.parseInt(previousNumber);
+        var newNumberInteger = Integer.parseInt(toAdd);
         var result = mainNumberInteger + newNumberInteger;
-        mainNumber = Integer.toBinaryString(result);
+        mainNumber = Integer.toString(result);
+        return mainNumber;
+    }
+
+    public String subtract(String toSubtract){
+        var mainNumberInteger = Integer.parseInt(previousNumber);
+        var newNumberInteger = Integer.parseInt(toSubtract);
+        var result = mainNumberInteger - newNumberInteger;
+        mainNumber = Integer.toString(result);
+        return mainNumber;
+    }
+
+    public String multiply(String toMultiply){
+        var mainNumberInteger = Integer.parseInt(previousNumber);
+        var newNumberInteger = Integer.parseInt(toMultiply);
+        var result = mainNumberInteger * newNumberInteger;
+        mainNumber = Integer.toString(result);
+        return mainNumber;
+    }
+
+    public String divide(String toDivide){
+        var mainNumberInteger = Integer.parseInt(previousNumber);
+        var newNumberInteger = Integer.parseInt(toDivide);
+        var result = mainNumberInteger / newNumberInteger;
+        mainNumber = Integer.toString(result);
         return mainNumber;
     }
 
